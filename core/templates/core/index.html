@@ -2,19 +2,14 @@
 {% block content %}
 <div class="container">
     <section class="blog-posts">
+        {% for post in posts %}
         <article class="post">
-            <h2>Blog Post Title 1</h2>
-            <p>Posted on July 26, 2024 by Author</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula orci sed nunc euismod, vel condimentum metus viverra...</p>
+            <h2>{{post.title}}</h2>
+            <p>Posted on {{post.date_posted}} by {{post.author}}</p>
+            <p>{{post.content}}</p>
             <a href="#" class="read-more">Read More</a>
         </article>
-        <article class="post">
-            <h2>Blog Post Title 2</h2>
-            <p>Posted on July 20, 2024 by Author</p>
-            <p>Aliquam erat volutpat. Vivamus vel vehicula nulla, sed pellentesque magna. Maecenas suscipit dui at lacus tristique, at suscipit lacus vehicula...</p>
-            <a href="#" class="read-more">Read More</a>
-        </article>
-        <!-- Add more blog posts here -->
+        {% endfor %}
     </section>
 </div>
 {% endblock content %}
