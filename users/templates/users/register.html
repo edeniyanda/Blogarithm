@@ -1,0 +1,20 @@
+{% extends 'core/base.html'%}
+{% block content%}
+    <h2>Login Form</h2>
+    <div>
+        <form action="" method="POST">
+            {% csrf_token %}
+
+            <fieldset>
+                <legend>Join the Legion of Blogaritans</legend>
+                {{form}}
+            </fieldset>
+            <div>
+                <button type="submit">Sign Up</button>
+            </div>
+        </form>
+        <div>
+            <small> Already a Blogaritan?</small><a href="">Login</a>
+        </div>
+    </div>
+{% endblock content%}
